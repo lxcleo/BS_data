@@ -1,0 +1,31 @@
+# Ignore object files and libraries
+*.o
+*.so
+*.a
+# Ignore R files and libraries
+Rslra.Rcheck
+Rslra*.tar.gz
+Rslra/src/*/*.*
+# Ignore SLICOT
+SLICOT
+# Ignore test results
+res_*.txt
+test_c/test
+test_c/gmon.out
+test_c/test_speed/*/*.txt
+test_c/test_speed/*/*.eps
+test_c/test_speed/*/.RData
+test_c/test_speed/*/*.Rout
+test_c/test_speed/gentest
+test_c/test.dSYM
+test_m/octave-core
+test_m/support/octave-core
+*.eps
+*.*~
+*~
+reg-slra
+examples.org
+demo.m
+doxydoc
+*.bak
+html

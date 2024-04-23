@@ -1,0 +1,15 @@
+PKG_LIBS=-lgsl -lgslcblas $(BLAS_LIBS) $(LAPACK_LIBS) $(FLIBS) 
+PKG_CFLAGS+=-DBUILD_R_PACKAGE
+PKG_CXXFLAGS+=-DBUILD_R_PACKAGE
+
+.PHONY: all clean shlib-clean
+
+SLRA_OBJS=$(shell cat SLRAOBJ.txt)
+RSLRA_OBJS=Rslra.o
+
+OBJECTS=$(RSLRA_OBJS) $(SLRA_OBJS)  $(SLICOT_OBJS) 
+
+all: $(SHLIB)
+
+clean:
+	rm -f $(OBJECTS) $(SHLIB)
